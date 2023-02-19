@@ -1,5 +1,5 @@
 Loop Files, *.esp
-     V .= "    {""" . N := A_LoopFileName . """: [""" . crc := FileCRC32(sFile := A_LoopFileName) . """]}" . "`,"
+     V .= "    {""" . N := A_LoopFileName . """: [""0x" . crc := FileCRC32(sFile := A_LoopFileName) . """]}" . "`,"
 R := SubStr(V, 1, (Str := StrLen(V) -1))
 If R =
  {
